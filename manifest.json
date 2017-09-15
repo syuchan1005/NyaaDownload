@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "NyaaDownload",
+  "description": "nyaa.si link select -> download torrent",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "downloads"
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": [ "checkDownload.js" ]
+  }]
+}
